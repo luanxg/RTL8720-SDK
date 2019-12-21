@@ -1,0 +1,24 @@
+Global:
+    tool : build_submitter
+
+Default:
+    profile : [change, coverity]
+
+Profiles:
+    - profile:
+      name : change
+      env : IOT-DUER-UBUN
+      command : sh ./build.sh
+      release : false
+
+    - profile:
+      name : test
+      env : centos6u3
+      command : sh ./build.sh
+      release : false
+
+    - profile:
+      name : coverity
+      env : centos6u3
+      command : export PATH=/opt/compiler/gcc-4.8.2/bin:\$PATH && export covpath=\$PWD && echo \$PWD && mkdir coverity && mkdir output && \$BUILD_KIT_PATH/coverity-7.5.1/cov-analysis-linux64/bin/cov-build --dir coverity sh ./build_coverity.sh && mv \$covpath/coverity \$covpath/output/coverity
+      release : true

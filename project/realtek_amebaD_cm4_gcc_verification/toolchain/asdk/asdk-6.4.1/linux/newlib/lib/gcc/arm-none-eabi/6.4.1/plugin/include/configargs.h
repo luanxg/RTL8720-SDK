@@ -1,0 +1,7 @@
+/* Generated automatically. */
+static const char configuration_arguments[] = "/home/RTDOMAIN/jenkins/workspace/sdk-builder/gcc-6/configure --prefix=/tmp/builder-jenkins/asdk-6.4.1-2773/release/asdk-6.4.1/linux/newlib --build=i686-pc-linux --host=i686-pc-linux --target=arm-none-eabi --enable-languages=c,c++ --enable-threads --disable-shared --enable-lto --enable-multilib --enable-target-optspace --enable-__cxa_atexit --disable-sjlj-exceptions --disable-decimal-float --disable-tls --disable-nls --enable-libssp --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libffi --disable-libitm --disable-libsanitizer --with-arch=armv5te --with-gnu-ld --with-gnu-as --with-dwarf2 --with-headers=yes --with-newlib --with-sdk=asdk --with-sysroot='/tmp/builder-jenkins/asdk-6.4.1-2773/release/asdk-6.4.1/linux/newlib' --with-build-sysroot=/tmp/builder-jenkins/asdk-6.4.1-2773/release/asdk-6.4.1/linux/newlib --with-pkgversion='Realtek ASDK-6.4.1 Build 2773' --with-mpfr=/tmp/builder-jenkins/asdk-6.4.1-2773/stage/asdk-6.4.1/newlib/mpfr-build/out --with-gmp=/tmp/builder-jenkins/asdk-6.4.1-2773/stage/asdk-6.4.1/newlib/gmp-build/out --with-mpc=/tmp/builder-jenkins/asdk-6.4.1-2773/stage/asdk-6.4.1/newlib/mpc-build/out --with-abi=aapcs";
+static const char thread_model[] = "single";
+
+static const struct {
+  const char *name, *value;
+} configure_default_options[] = { { "abi", "aapcs" }, { "arch", "armv5te" } };

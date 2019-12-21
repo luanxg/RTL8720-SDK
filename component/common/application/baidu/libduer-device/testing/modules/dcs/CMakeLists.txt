@@ -1,0 +1,6 @@
+ADD_SUBDIRECTORY(alert)
+ADD_SUBDIRECTORY(input)
+ADD_SUBDIRECTORY(speaker_control)
+ADD_SUBDIRECTORY(playback_control)
+ADD_SUBDIRECTORY(system)
+ADD_SUBDIRECTORY(audio)

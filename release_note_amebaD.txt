@@ -1,0 +1,29 @@
+
+/*
+ * Release Note
+ */
+
+	sdk-amebad-beta_v5.1
+	1. Modify memory layout, please refer to the latest application note
+	   for memory layout and use the latest Image_Tool to download images
+	2. Modify OTA code
+	-----------------------------------------------------------------------
+	sdk-amebad-beta_v5.2
+	1. add new make cmd for MP 
+	-----------------------------------------------------------------------
+	sdk-amebad-beta_v5.3
+	1. add BT coexist and BT example
+	2. Swtich shell to KM4 by default
+	3. add psram heap API
+	-----------------------------------------------------------------------
+	sdk-amebad-beta_v6.0
+	1. add support for rtl probe(debug tools)
+	2. add code analysis python script
+	3. reimplement use control power save mechanism
+	4. reimplement all ADC related examples(modify convert formula)
+	5. add k-free,DPK functions and revise radio parameters
+	6. reimplement FTL(Flash Translation Layer) function
+ 	7. revise standard output(printf sprintf) link library(reference GCC Standard Library of Application Note)
+	8. revise BT config and BLE function
+ 	9. add OTA select hook function	
+	-----------------------------------------------------------------------

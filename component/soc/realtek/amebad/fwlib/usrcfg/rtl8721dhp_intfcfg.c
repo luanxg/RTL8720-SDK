@@ -1,0 +1,73 @@
+/**
+  ******************************************************************************
+  * @file    rtl8721dlp_intfcfg.c
+  * @author
+  * @version V1.0.0
+  * @date    2016-05-17
+  * @brief   This file provides firmware functions to manage the following 
+  *          functionalities:
+  *           - uart mbed function config
+  ******************************************************************************
+  * @attention
+  *
+  * This module is a confidential and proprietary property of RealTek and
+  * possession or use of this module requires written permission of RealTek.
+  *
+  * Copyright(c) 2015, Realtek Semiconductor Corporation. All rights reserved.
+  ****************************************************************************** 
+  */
+
+#include "ameba_soc.h"
+#include "autoconf.h"
+
+PWMCHANCFG_TypeDef pwmchannel_config[]=
+{
+	// {PWM channel, KM0 channel status, KM4 channel status}
+	{_PA_12,			OFF,				OFF},	//pwm channel 0
+	{_PA_13, 		OFF,				ON},	//pwm channel 1
+	{_PA_23, 		OFF,				OFF},	//pwm channel 2
+	{_PA_24, 		OFF,				OFF},	//pwm channel 3
+	{_PA_25, 		OFF,				OFF},	//pwm channel 4
+	{_PA_26, 		OFF,				OFF},	//pwm channel 5
+	{_PA_29, 		OFF,				OFF},	//pwm channel 6
+	{_PA_30,			ON,				OFF},	//pwm channel 7
+	{_PB_4,			OFF,				ON},	//pwm channel 8
+	{_PB_5, 			OFF,				OFF},	//pwm channel 9
+	{_PB_18, 		OFF,				OFF},	//pwm channel 10
+	{_PB_19, 		OFF,				OFF},	//pwm channel 11
+	{_PB_20, 		OFF,				OFF},	//pwm channel 12
+	{_PB_21, 		OFF,				OFF},	//pwm channel 13
+	{_PB_22, 		ON,				OFF},	//pwm channel 14
+	{_PB_23, 		OFF,				OFF},	//pwm channel 15
+	{_PB_24, 		OFF,				OFF},	//pwm channel 16
+	{_PB_25, 		OFF,				OFF},	//pwm channel 17
+	{_PB_7, 			OFF,				OFF}	//pwm channel 17
+};
+
+PSRAMCFG_TypeDef psram_dev_config = {
+	.psram_dev_enable = FALSE,				//enable psram
+	.psram_dev_cal_enable = FALSE,			//enable psram calibration function
+	.psram_dev_retention = FALSE,			//enable psram retention
+	.psram_heap_start_address = 0x02000400,	//config psram heap start address, should be 8 bytes aligned
+	.psram_heap_size = 0x400000-0x400,		//config psram heap size, should be 8 bytes aligned
+};
+
+SDIOHCFG_TypeDef sdioh_config = {
+	.sdioh_bus_speed = SD_SPEED_HS,				//SD_SPEED_DS or SD_SPEED_HS
+	.sdioh_bus_width = SDIOH_BUS_WIDTH_4BIT, 	//SDIOH_BUS_WIDTH_1BIT or SDIOH_BUS_WIDTH_4BIT
+	.sdioh_cd_pin = _PB_25,						//_PB_25/_PA_6/_PNC
+	.sdioh_wp_pin = _PNC,						//_PB_24/_PA_5/_PNC
+};
+
+#if defined(CONFIG_FTL_ENABLED)
+#define FTL_MEM_CUSTEM		0
+#if FTL_MEM_CUSTEM == 0
+#error "You should allocate flash sectors to for FTL physical map as following, then set FTL_MEM_CUSTEM to 1. For more information, Please refer to Application Note, FTL chapter. "
+#else
+const u8 ftl_phy_page_num = 3;									/* The number of physical map pages, default is 3*/
+const u32 ftl_phy_page_start_addr = 0x00102000;					/* The start offset of flash pages which is allocated to FTL physical map.
+																	Users should modify it according to their own memory layout!! */
+#endif
+#endif
+
+/******************* (C) COPYRIGHT 2016 Realtek Semiconductor *****END OF FILE****/

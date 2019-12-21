@@ -1,0 +1,8 @@
+out/
+libs/
+obj/
+tool/sdk_headers
+testing/build
+#ignore cscope & tags
+cscope.*
+tags

@@ -1,0 +1,1 @@
+BUILD_SUBMITTER -e IOT-DUER-UBUN -x -u . -m baidu/duer/libduer-device -c "cd baidu/duer/libduer-device && sh build.sh"

@@ -1,0 +1,29 @@
+
+/*
+ * Release Note
+ */
+	v1.0.1.26
+	2019/3/26
+    GCID 2a93541a56de2ed2, PGCID 4e34f7ce643b8fbe
+	1. Adjust bt stack
+
+	v1.0.1.20
+	2019/3/5
+	GCID feea4e1edadca966, PGCID e84631d5466819df
+	1. Add os_timer_state_get
+	
+	v1.0.1.18
+	2019/2/1
+	GCID 9e11491d2db8472, PGCID af114fc898fc5646
+	1. Close Controller to Host flow control
+	2. Add ftl.h
+
+	v1.0.1.15
+	2019/1/23
+	GCID d592b3101ffac116, PGCID 4450301711e5a9d0
+	1. First release
+	
+
+	
+
+
